@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+}
+
+header {
+    background-color: #FAFFAF;
+    color: rgb(0, 0, 0);
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    background-color: #0F67B1;
+    color: white;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 90px;
+    /* Adjusted for the header */
+    left: 0;
+    padding-top: 1em;
+    box-sizing: border-box;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    margin: 1em 0;
+}
+
+.sidebar nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    padding: 0.75em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #FAFFAF;
+    transform: translateX(10px);
+}
+
+.sidebar nav ul li a.active {
+    background-color: #FAFFAF;
+}
+
+
+h2 {
+    margin-top: 0;
+}
+
+/* Table Styles */
+table {
+    position: relative;
+    left: -30px;
+    top: 250px;
+    width: 75%;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Table Header Styles */
+thead {
+    background-color: #96C9F4;
+    color: white;
+    text-align: center;
+}
+
+thead th {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+/* Table Body Styles */
+tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e6e6e6;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+h2 {
+    position: relative;
+    top: 150px;
+    left: 300px;
+    font-size: 30px;
+    color: black;
+}
+
+.update_button,
+.delete_button,
+.update_button,
+.add_button {
+    background-color: #FAFFAF;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete_button {
+    background-color: #f44336;
+}
+
+.add_button{
+    position: relative;
+    top: 150px;
+    left: 1100px;
+    width: 100px;
+}
+
+.messagebox {
+    position: fixed;
+    color: black;
+    left: 750px;
+    top: 150px;
+    background-color: #3FA2F6;
+    text-align: center;
+    height: 30px;
+    font-size: 20px;
+}

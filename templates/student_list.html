@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link rel="stylesheet" href="/static/CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>STUDENT INFORMATION SYSTEM</h1>
+    </header>
+    <div class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#">STUDENT LIST</a></li>
+                <li><a href="#">COURSES</a></li>
+                <li><a href="#">GRADES</a></li>
+                <li><a href="#">REPORTS</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <h2>STUDENT LIST</h2>
+
+    <div class="add-student">
+        <a href="{{ url_for('add_student') }}" class="add_button">Add Student</a>
+    </div>
+
+    {% if message %}
+    <div class="messagebox">{{ message }}</div>
+    {% endif %}
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Sex</th>
+                <th>Address</th>
+                <th>Course</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student[0] }}</td>
+                <td>{{ student[1] }}</td>
+                <td>{{ student[2] }}</td>
+                <td>{{ student[3] }}</td>
+                <td>{{ student[4] }}</td>
+                <td>{{ student[5] }}</td>
+                <td>{{ student[6] }}</td>
+                <td>
+                    <a href="{{ url_for('update_student', student_id=student[0]) }}" class="update_button">Update</a>
+                    <a href="{{ url_for('delete_student', student_id=student[0]) }}" class="delete_button">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
